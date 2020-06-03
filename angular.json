@@ -211,6 +211,50 @@
           "style": "scss"
         }
       }
+    },
+    "core-card": {
+      "projectType": "library",
+      "root": "libs/core/card",
+      "sourceRoot": "libs/core/card/src",
+      "prefix": "aflac",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/core/card/tsconfig.lib.json",
+            "project": "libs/core/card/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core/card/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/card/tsconfig.lib.json",
+              "libs/core/card/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/card/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/card/jest.config.js",
+            "tsConfig": "libs/core/card/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/card/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

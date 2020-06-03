@@ -31,6 +31,9 @@
     },
     "website-policies": {
       "tags": []
+    },
+    "core-card": {
+      "tags": []
     }
   }
 }
