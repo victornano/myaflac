@@ -14,12 +14,15 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["lint", "test", "e2e"]
       }
     }
   },
   "projects": {
     "website": {
+      "tags": []
+    },
+    "website-packaged": {
       "tags": []
     },
     "website-e2e": {
