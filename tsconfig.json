@@ -18,7 +18,8 @@
     "paths": {
       "@aflac/website/claims": ["libs/website/claims/src/index.ts"],
       "@aflac/website/policies": ["libs/website/policies/src/index.ts"],
-      "@aflac/core/card": ["libs/core/card/src/index.ts"]
+      "@aflac/core/card": ["libs/core/card/src/index.ts"],
+      "@aflac/core/storybook": ["libs/core/storybook/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
