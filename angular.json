@@ -23,12 +23,22 @@
             "aot": true,
             "assets": [
               "apps/website/src/favicon.ico",
-              "apps/website/src/assets"
+              "apps/website/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./libs/assets/",
+                "output": "./assets"
+              }
             ],
             "styles": [
               "apps/website/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/assets/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -129,7 +139,12 @@
             "styles": [
               "apps/website/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/assets/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -206,7 +221,12 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/website/claims/tsconfig.lib.json",
-            "project": "libs/website/claims/ng-package.json"
+            "project": "libs/website/claims/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/assets/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -253,7 +273,12 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/website/policies/tsconfig.lib.json",
-            "project": "libs/website/policies/ng-package.json"
+            "project": "libs/website/policies/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/assets/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -300,7 +325,12 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/core/card/tsconfig.lib.json",
-            "project": "libs/core/card/ng-package.json"
+            "project": "libs/core/card/ng-package.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "libs/assets/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -328,7 +358,7 @@
             "tsConfig": "libs/core/card/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/core/card/src/test-setup.ts"
-          }
+          }          
         }
       },
       "schematics": {
