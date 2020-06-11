@@ -221,12 +221,7 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/website/claims/tsconfig.lib.json",
-            "project": "libs/website/claims/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/assets/styles"
-              ]
-            }
+            "project": "libs/website/claims/ng-package.json"
           },
           "configurations": {
             "production": {
@@ -273,12 +268,7 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/website/policies/tsconfig.lib.json",
-            "project": "libs/website/policies/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/assets/styles"
-              ]
-            }
+            "project": "libs/website/policies/ng-package.json"
           },
           "configurations": {
             "production": {
@@ -325,12 +315,7 @@
           "builder": "@nrwl/angular:package",
           "options": {
             "tsConfig": "libs/core/card/tsconfig.lib.json",
-            "project": "libs/core/card/ng-package.json",
-            "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/assets/styles"
-              ]
-            }
+            "project": "libs/core/card/ng-package.json"
           },
           "configurations": {
             "production": {
@@ -457,6 +442,11 @@
           }
         }
       }
+    },
+    "assets": {
+      "projectType": "library",
+      "root": "libs/assets",
+      "prefix": "aflac"
     }
   },
   "cli": {
