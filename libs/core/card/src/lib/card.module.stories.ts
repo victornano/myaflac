@@ -1,12 +1,12 @@
 import { storiesOf, moduleMetadata } from '@storybook/angular';
 import { CardModule } from './card.module';
 import { withKnobs} from '@storybook/addon-knobs/angular';
-import { CounterModule } from '../counter/counter.module';
+
 // @ts-ignore: suppresses all errors that originate on the following line
 import readme from './card.md';
 
 const template = `
-  <div wfc-card>
+  <div aflac-card>
     <div header>
       <h1>Header</h1>
     </div>

@@ -20,7 +20,14 @@
       "@aflac/website/policies": ["libs/website/policies/src/index.ts"],
       "@aflac/core/card": ["libs/core/card/src/index.ts"],
       "@aflac/core/storybook": ["libs/core/storybook/src/index.ts"],
-      "@aflac/assets": ["libs/assets/src/index.ts"]
+      "@aflac/assets": ["libs/assets/src/index.ts"],
+      "@aflac/core/notification-bar": [
+        "libs/core/notification-bar/src/index.ts"
+      ],
+      "@aflac/core/icon": ["libs/core/icon/src/index.ts"],
+      "@aflac/core/models": ["libs/core/models/src/index.ts"],
+      "@aflac/core/header": ["libs/core/header/src/index.ts"],
+      "@aflac/core/translate": ["libs/core/translate/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

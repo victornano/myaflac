@@ -1,0 +1,6 @@
+<aflac-icon class="icon notification-bar-status-icon" *ngIf="hasIcon" icon="{{statusIcon}}"></aflac-icon>
+<section class="notification-bar-content"><ng-content></ng-content></section>
+<a class="notification-bar-close" *ngIf="canClose" (click)="onCloseBar()" >
+    <aflac-icon class="icon notification-bar-close-icon" icon="icon-close" ></aflac-icon>
+</a>
+

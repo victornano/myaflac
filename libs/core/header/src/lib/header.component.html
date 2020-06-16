@@ -1,0 +1,78 @@
+<!-- mobile OR native OR desktop -->
+
+<nav>
+  <a href="#" class="burger-menu pointer" (click)="onToggleMenu()">
+    <img src="assets/images/menu-icon.png" />
+  </a>
+
+  <div class="menu">
+    <ul>
+      <li class="lang" (click)="onChangeLang('en')">EN</li>
+      <!-- <li class="lang" (click)="onChangeLang('sp')"> ES </li> -->
+      <li class="lang" (click)="onChangeLang('jp')">JP</li>
+      <li class="hide-mobile"><img src="assets/images/chaticon.png" /></li>
+      <li><img src="assets/images/search.png" /></li>
+    </ul>
+  </div>
+</nav>
+
+<div
+  class="header-items"
+  [ngClass]="[showMenu ? 'show' : '', slideUp ? 'slide-show' : '']"
+>
+  <div class="arrow" (click)="onSlideMenuToggle()">
+    <img src="assets/images/arrow-up.png" alt="" />
+  </div>
+
+  <div class="nav-bar">
+    <span class="close pointer">
+      <img src="assets/images/Close-icon.png" alt="" (click)="onToggleMenu()"
+    /></span>
+    <span class="logo">
+      <img src="assets/images/bc_aflac_logo_large.png" />
+    </span>
+  </div>
+
+  <ul>
+    <li>
+      <img src="assets/images/24115.png" alt="" /><span>{{
+        'header.newClaim' | translate
+      }}</span>
+    </li>
+    <li>
+      <img src="assets/images/home.png" alt="" /><a (click)="onToggleMenu()" [routerLink]="['/']">{{
+        'header.home' | translate
+      }}</a>
+    </li>
+    <li>
+      <img src="assets/images/claims.png" alt="" /><a (click)="onToggleMenu()" [routerLink]="['/claims']">{{
+        'header.claims' | translate
+      }}</a>
+    </li>
+    <li>
+      <img src="assets/images/policies.png" alt="" /><a (click)="onToggleMenu()" [routerLink]="['/policies']">{{
+        'header.policies' | translate
+      }}</a>
+    </li>
+    <li class="hide-desktop">
+      <img src="assets/images/chaticon.png" alt="" /><span>{{
+        'header.chat' | translate
+      }}</span>
+    </li>
+    <li>
+      <img src="assets/images/phone.png" alt="" /><span>{{
+        'header.contact' | translate
+      }}</span>
+    </li>
+    <li>
+      <img src="assets/images/messages.png" alt="" /><span>{{
+        'header.messages' | translate
+      }}</span>
+    </li>
+    <li>
+      <img src="assets/images/account.png" alt="" /><span>{{
+        'header.account' | translate
+      }}</span>
+    </li>
+  </ul>
+</div>

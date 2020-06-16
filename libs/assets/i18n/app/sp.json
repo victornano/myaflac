@@ -1,0 +1,12 @@
+{
+   "header":{
+        "newClaim":"Nuevo reclamo",
+        "home":"Casa",
+        "claims":"reclamos",
+        "policies":"politicas",
+        "chat":"Chatear",
+        "contact":"Contacto",
+        "messages":"mensajes",
+        "account":"Mi cuenta"
+    }
+}

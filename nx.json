@@ -47,6 +47,21 @@
     },
     "assets": {
       "tags": []
+    },
+    "core-notification-bar": {
+      "tags": []
+    },
+    "core-icon": {
+      "tags": []
+    },
+    "core-models": {
+      "tags": []
+    },
+    "core-header": {
+      "tags": []
+    },
+    "core-translate": {
+      "tags": []
     }
   }
 }

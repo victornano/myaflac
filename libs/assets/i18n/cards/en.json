@@ -1,0 +1,16 @@
+{
+    "cards":{
+        "title_1":"Title 1",
+        "title_2":"Full Card Simple",
+        "title_3":"Single Icon - End",
+        "title_4":"Single Icon - Start",
+
+        "title_5":"NO ICONS - HEADER + COPY",
+        "title_6":"ICONS END - HEADER + COPY",
+        "title_7":"Single Icon - Start",
+        "title_8":"Single Icon - Start",
+
+        "startFromTemplate":"Start From Template",
+        "accountStatus":"Account Status"
+    }
+}

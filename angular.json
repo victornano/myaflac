@@ -30,14 +30,10 @@
                 "output": "./assets"
               }
             ],
-            "styles": [
-              "apps/website/src/styles.scss"
-            ],
+            "styles": ["apps/website/src/styles.scss"],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/assets/styles"
-              ]
+              "includePaths": ["libs/assets/styles"]
             }
           },
           "configurations": {
@@ -95,10 +91,7 @@
               "apps/website/tsconfig.app.json",
               "apps/website/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/website/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/website/**"]
           }
         },
         "test": {
@@ -134,16 +127,17 @@
             "aot": true,
             "assets": [
               "apps/website/src/favicon.ico",
-              "apps/website/src/assets"
+              "apps/website/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./libs/assets/",
+                "output": "./assets"
+              }
             ],
-            "styles": [
-              "apps/website/src/styles.scss"
-            ],
+            "styles": ["apps/website/src/styles.scss"],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "libs/assets/styles"
-              ]
+              "includePaths": ["libs/assets/styles"]
             }
           },
           "configurations": {
@@ -200,13 +194,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/website-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/website-e2e/**"
-            ]
+            "tsConfig": ["apps/website-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/website-e2e/**"]
           }
         }
       }
@@ -236,10 +225,7 @@
               "libs/website/claims/tsconfig.lib.json",
               "libs/website/claims/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/website/claims/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/website/claims/**"]
           }
         },
         "test": {
@@ -283,10 +269,7 @@
               "libs/website/policies/tsconfig.lib.json",
               "libs/website/policies/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/website/policies/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/website/policies/**"]
           }
         },
         "test": {
@@ -330,10 +313,7 @@
               "libs/core/card/tsconfig.lib.json",
               "libs/core/card/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/core/card/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/core/card/**"]
           }
         },
         "test": {
@@ -343,7 +323,7 @@
             "tsConfig": "libs/core/card/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/core/card/src/test-setup.ts"
-          }          
+          }
         }
       },
       "schematics": {
@@ -365,9 +345,14 @@
               "libs/core/storybook/tsconfig.lib.json",
               "libs/core/storybook/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/core/storybook/**"
+            "exclude": ["**/node_modules/**", "!libs/core/storybook/**"],
+            "assets": [
+              "libs/core/storybook/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./libs/assets/",
+                "output": "./assets"
+              }
             ]
           }
         },
@@ -432,13 +417,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/core-storybook-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/core-storybook-e2e/**"
-            ]
+            "tsConfig": ["apps/core-storybook-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/core-storybook-e2e/**"]
           }
         }
       }
@@ -447,6 +427,226 @@
       "projectType": "library",
       "root": "libs/assets",
       "prefix": "aflac"
+    },
+    "core-notification-bar": {
+      "projectType": "library",
+      "root": "libs/core/notification-bar",
+      "sourceRoot": "libs/core/notification-bar/src",
+      "prefix": "aflac",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/core/notification-bar/tsconfig.lib.json",
+            "project": "libs/core/notification-bar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core/notification-bar/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/notification-bar/tsconfig.lib.json",
+              "libs/core/notification-bar/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/notification-bar/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/notification-bar/jest.config.js",
+            "tsConfig": "libs/core/notification-bar/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/notification-bar/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "core-icon": {
+      "projectType": "library",
+      "root": "libs/core/icon",
+      "sourceRoot": "libs/core/icon/src",
+      "prefix": "aflac",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/core/icon/tsconfig.lib.json",
+            "project": "libs/core/icon/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core/icon/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/icon/tsconfig.lib.json",
+              "libs/core/icon/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/icon/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/icon/jest.config.js",
+            "tsConfig": "libs/core/icon/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/icon/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "core-models": {
+      "projectType": "library",
+      "root": "libs/core/models",
+      "sourceRoot": "libs/core/models/src",
+      "prefix": "aflac",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/core/models/tsconfig.lib.json",
+            "project": "libs/core/models/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core/models/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/models/tsconfig.lib.json",
+              "libs/core/models/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/models/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/models/jest.config.js",
+            "tsConfig": "libs/core/models/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/models/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "core-header": {
+      "projectType": "library",
+      "root": "libs/core/header",
+      "sourceRoot": "libs/core/header/src",
+      "prefix": "aflac",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/core/header/tsconfig.lib.json",
+            "project": "libs/core/header/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core/header/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/header/tsconfig.lib.json",
+              "libs/core/header/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/header/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/header/jest.config.js",
+            "tsConfig": "libs/core/header/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/header/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "core-translate": {
+      "projectType": "library",
+      "root": "libs/core/translate",
+      "sourceRoot": "libs/core/translate/src",
+      "prefix": "aflac",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/core/translate/tsconfig.lib.json",
+            "project": "libs/core/translate/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core/translate/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/translate/tsconfig.lib.json",
+              "libs/core/translate/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/translate/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/translate/jest.config.js",
+            "tsConfig": "libs/core/translate/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/translate/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

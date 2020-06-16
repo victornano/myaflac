@@ -1,0 +1,93 @@
+@import 'core';
+
+:host {
+  font-size: em(13);
+  font-weight: 600;
+  text-align: left;
+  line-height: normal;
+  color: $black;
+  background: rgba($white, 0.7);
+  padding: em(10, 13) 0;
+  border-radius: em(6, 13);
+  position: relative;
+  display: flex;
+
+  @include mq(breakPointD) {
+    font-size: em(14);
+    padding: em(20, 14) 0;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  &.info ::ng-deep {
+    path {
+      fill: $black;
+    }
+
+    a {
+      color: $black;
+    }
+  }
+
+  &.error,
+  &.success {
+    color: $white;
+  }
+
+  &.error {
+    background: $red1;
+  }
+
+  &.success {
+    background: $green1;
+  }
+
+  .notification-bar {
+    &-content {
+      flex: 1;
+      font-weight: 600;
+      padding: 0 em(20, 13);
+
+      @include mq(breakPointD) {
+        padding: 0 em(20, 14);
+      }
+    }
+
+    &-status-icon {
+      width: em(20, 13);
+      height: em(20, 13);
+      align-self: center;
+      margin-left: em(10, 13);
+
+      @include mq(breakPointD) {
+        width: em(20, 14);
+        height: em(20, 14);
+        margin-left: em(20, 14);
+      }
+    }
+
+    &-close {
+      cursor: pointer;
+      margin-right: em(10, 13);
+
+      @include mq(breakPointE) {
+        align-self: center;
+        margin-right: em(20, 14);
+      }
+
+      &-icon {
+        width: em(14, 13);
+        height: em(14, 13);
+        margin-top: em(5, 13);
+
+        @include mq(breakPointD) {
+          width: em(14, 14);
+          height: em(14, 14);
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

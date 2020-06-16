@@ -1,0 +1,12 @@
+{
+    "header":{
+         "newClaim":"新しいクレーム",
+         "home":"ホーム",
+         "claims":"請求",
+         "policies":"ポリシー",
+         "chat":"チャットする",
+         "contact":"お問い合わせ",
+         "messages":"メッセージ",
+         "account":"マイアカウント"
+     }
+ }

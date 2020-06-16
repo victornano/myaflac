@@ -1,0 +1,12 @@
+{
+    "header":{
+         "newClaim":"New Claim",
+         "home":"Home",
+         "claims":"My Claims",
+         "policies":"My Policies",
+         "chat":"Chat Us",
+         "contact":"Contact Us",
+         "messages":"Messages",
+         "account":"My Account"
+     }
+ }

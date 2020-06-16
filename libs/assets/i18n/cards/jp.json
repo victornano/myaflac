@@ -1,0 +1,10 @@
+{
+    "cards":{
+        "fullTitle":"題名 1",
+        "title_2":"シンプルなカード",
+        "title_3":"単一のアイコン-終了",
+        "title_4":"単一のアイコン-開始",
+        "startFromTemplate":"テンプレートから始める",
+        "accountStatus":"アカウントのステータス"
+    }
+}
