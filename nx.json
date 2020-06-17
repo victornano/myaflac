@@ -62,6 +62,15 @@
     },
     "core-translate": {
       "tags": []
+    },
+    "core-select": {
+      "tags": []
+    },
+    "core-menu": {
+      "tags": []
+    },
+    "core-tools": {
+      "tags": []
     }
   }
 }

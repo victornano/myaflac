@@ -647,6 +647,138 @@
           "style": "scss"
         }
       }
+    },
+    "core-select": {
+      "projectType": "library",
+      "root": "libs/core/select",
+      "sourceRoot": "libs/core/select/src",
+      "prefix": "aflac",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/core/select/tsconfig.lib.json",
+            "project": "libs/core/select/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core/select/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/select/tsconfig.lib.json",
+              "libs/core/select/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/select/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/select/jest.config.js",
+            "tsConfig": "libs/core/select/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/select/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "core-menu": {
+      "projectType": "library",
+      "root": "libs/core/menu",
+      "sourceRoot": "libs/core/menu/src",
+      "prefix": "aflac",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/core/menu/tsconfig.lib.json",
+            "project": "libs/core/menu/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core/menu/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/menu/tsconfig.lib.json",
+              "libs/core/menu/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/menu/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/menu/jest.config.js",
+            "tsConfig": "libs/core/menu/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/menu/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "core-tools": {
+      "projectType": "library",
+      "root": "libs/core/tools",
+      "sourceRoot": "libs/core/tools/src",
+      "prefix": "aflac",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/core/tools/tsconfig.lib.json",
+            "project": "libs/core/tools/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core/tools/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/tools/tsconfig.lib.json",
+              "libs/core/tools/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/tools/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/core/tools/jest.config.js",
+            "tsConfig": "libs/core/tools/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/core/tools/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

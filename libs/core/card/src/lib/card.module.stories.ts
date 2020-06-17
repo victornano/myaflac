@@ -1,38 +1,45 @@
 import { storiesOf, moduleMetadata } from '@storybook/angular';
 import { CardModule } from './card.module';
-import { withKnobs} from '@storybook/addon-knobs/angular';
+import { withKnobs, text } from '@storybook/addon-knobs/angular';
+import { Component, Input } from '@angular/core';
 
 // @ts-ignore: suppresses all errors that originate on the following line
 import readme from './card.md';
 
-const template = `
+@Component({
+  template: `
   <div aflac-card>
-    <div header>
-      <h1>Header</h1>
+    <div header >
+      <div [innerHTML]="header"></div>
     </div>
     <div body>
-      <p>Body</p>
+      <div [innerHTML]="body"></div>
     </div>
-  </div>`;
-
-const stories = storiesOf('Card', module);
-
-stories.addDecorator(
-  moduleMetadata({
-    imports: [
-      CardModule
-    ],
-  }),
-);
-stories.addDecorator(withKnobs);
-
-stories.add('default', () => {
-
-  return {
-    template,
-  };
-},
-{
-  notes: { markdown: readme }
+  </div>`
+})
+class CardDemoComponent {
+  @Input() header = '';
+  @Input() body = '';
 }
-);
+
+export default {
+  title: 'Card'
+}
+
+export const primary = () => ({
+  moduleMetadata: {
+    imports: [CardModule]
+  },
+  component: CardDemoComponent,
+  props: {
+    header: text('Header', '<h1> Card Header</h1>'),
+    body: text('Body', '<p> Card Body</p>')
+  }
+});
+primary.story = {
+  parameters: {
+    knobs: {
+      escapeHTML: false,
+    }
+  }
+};
