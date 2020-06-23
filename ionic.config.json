@@ -1,5 +1,7 @@
 {
   "name": "myaflac",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "custom"
 }
