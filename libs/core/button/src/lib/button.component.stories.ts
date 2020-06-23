@@ -23,7 +23,7 @@ class ButtonDemoComponent {
 }
 
 export default {
-  title: 'Button'
+  title: 'Button '
 }
 
 export const primary = () => ({
