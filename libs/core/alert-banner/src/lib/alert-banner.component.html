@@ -1,0 +1,4 @@
+<div class="main" [ngClass]="{ 'success':type === 'success', 'error':type === 'error', 'default':type === 'default' }">
+  <ng-content select="[body]" class="body-copy"></ng-content>
+  <ng-content select="[icon-end]"></ng-content>
+</div>

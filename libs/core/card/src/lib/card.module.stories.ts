@@ -32,8 +32,8 @@ export const primary = () => ({
   },
   component: CardDemoComponent,
   props: {
-    header: text('Header', '<h1> Card Header</h1>'),
-    body: text('Body', '<p> Card Body</p>')
+    header: text('ng-content[header]', '<h1> Card Header</h1>'),
+    body: text('ng-content[body]', '<p> Card Body</p>')
   }
 });
 primary.story = {

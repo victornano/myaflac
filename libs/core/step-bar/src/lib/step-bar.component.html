@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let step of steps; index as i;" [ngClass]="{ 'active':isActive(i), 'has-icon': hasIcon(i)} " >
+      <span class="icon">
+        <img src="{{step.icon}}" alt="">
+      </span>
+      {{step.value}}
+  </li>
+</ul>

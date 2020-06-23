@@ -30,7 +30,11 @@
       "@aflac/core/translate": ["libs/core/translate/src/index.ts"],
       "@aflac/core/select": ["libs/core/select/src/index.ts"],
       "@aflac/core/menu": ["libs/core/menu/src/index.ts"],
-      "@aflac/core/tools": ["libs/core/tools/src/index.ts"]
+      "@aflac/core/tools": ["libs/core/tools/src/index.ts"],
+      "@aflac/core/button": ["libs/core/button/src/index.ts"],
+      "@aflac/core/alert-banner": ["libs/core/alert-banner/src/index.ts"],
+      "@aflac/core/tabs": ["libs/core/tabs/src/index.ts"],
+      "@aflac/core/step-bar": ["libs/core/step-bar/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

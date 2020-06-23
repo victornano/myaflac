@@ -2,6 +2,7 @@ import { storiesOf, moduleMetadata } from '@storybook/angular';
 import { SelectModule } from './select.module';
 import { text, withKnobs } from '@storybook/addon-knobs/angular';
 import { action } from '@storybook/addon-actions';
+import { withA11y } from '@storybook/addon-a11y';
 // @ts-ignore: suppresses all errors that originate on the following line
 import readme from './select.md';
 
@@ -23,6 +24,7 @@ stories.addDecorator(
     ],
   }),
 );
+stories.addDecorator(withA11y);
 stories.addDecorator(withKnobs);
 
 stories.add('default', () => {

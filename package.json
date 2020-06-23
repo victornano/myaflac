@@ -33,7 +33,8 @@
     "sync:android": "npx cap sync android",
     "sync:ios": "npx cap sync ios",
     "packaged:android": "nx build website-packaged && npm run sync:android && npm run open:android",
-    "packaged:ios": "nx build website-packaged && npm run sync:ios && npm run open:ios"
+    "packaged:ios": "nx build website-packaged && npm run sync:ios && npm run open:ios",
+    "core-storybook": "nx run core-storybook:storybook"
   },
   "private": true,
   "dependencies": {
@@ -67,8 +68,10 @@
     "@nrwl/jest": "9.3.0",
     "@nrwl/storybook": "^9.3.0",
     "@nrwl/workspace": "9.3.0",
+    "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-knobs": "5.3.9",
+    "@storybook/addon-notes": "^5.3.19",
     "@storybook/angular": "5.3.9",
     "@types/jest": "25.1.4",
     "@types/node": "~8.9.4",

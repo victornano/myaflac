@@ -1,0 +1,63 @@
+:host{
+
+    .main{
+        min-height: 50px;
+        width: 100%;
+        border-top: 1px solid #153B5E;
+        border-bottom: 1px solid #153B5E;
+        color: #153B5E;
+        font-size: 14px;
+        font-weight: 600;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 20px;
+        box-sizing: border-box;
+        justify-content: space-between;
+
+        ::ng-deep section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            svg{
+                max-width: 15px;
+    
+                path{
+                    fill: #153B5E;
+                }
+            }
+
+            p{
+                padding: 10px 10px 10px 0;
+            }
+        }
+    
+        &.success{
+            border-top: 1px solid green;
+            border-bottom: 1px solid green;
+            color: green;
+
+            ::ng-deep svg{
+                path{
+                    fill: green;
+                }
+            }
+        }
+
+        &.error{
+            border-top: 1px solid red;
+            border-bottom: 1px solid red;
+            color: red;
+
+            ::ng-deep svg{
+                path{
+                    fill: red;
+                }
+            }
+        }
+
+
+    }
+
+}

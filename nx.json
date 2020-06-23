@@ -71,6 +71,18 @@
     },
     "core-tools": {
       "tags": []
+    },
+    "core-button": {
+      "tags": []
+    },
+    "core-alert-banner": {
+      "tags": []
+    },
+    "core-tabs": {
+      "tags": []
+    },
+    "core-step-bar": {
+      "tags": []
     }
   }
 }

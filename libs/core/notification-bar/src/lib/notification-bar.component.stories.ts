@@ -39,7 +39,7 @@ export const primary = () => ({
     canClose: boolean('canClose', true),
     hasIcon: boolean('hasIcon', true),
     statusIcon: text('statusIcon', ''),
-    content: text('Content', '<p>Information message</p>'),
+    content: text('ng-content', '<p>Information message</p>'),
   },
 });
 primary.story = {
